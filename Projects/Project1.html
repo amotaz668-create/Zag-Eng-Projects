@@ -2,102 +2,50 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moataz Agency</title>
+    <meta charset="UTF-8" />
+    <title>Gas Cylinder Order Form</title>
 </head>
 
 <body>
+    <h1>PLEASE FILL THE BOXES BELOW</h1>
 
-    <!-- Header -->
-    <header>
-        <h1>Moataz</h1>
-        <nav>
-            <a href="#services">Services</a> |
-            <a href="#portfolio">Portfolio</a> |
-            <a href="#about">About</a> |
-            <a href="#contact">Contact</a>
-        </nav>
-        <hr>
-    </header>
+    <form>
+        <label for="fullName">Full Name:</label><br />
+        <input type="text" id="fullName" name="fullName" /><br /><br />
 
+        <label for="email">E-mail:</label><br />
+        <input type="email" id="email" name="email" placeholder="amotaz668@gmail.com
+" /><br /><br />
 
+        <label for="phone">Recipient Phone Number:</label><br />
+        <input type="text" id="phone" name="phone" /><br /><br />
 
+        <label>Preference:</label><br />
+        <input type="checkbox" id="exchange" name="preference" value="exchange" />
+        <label for="exchange">Exchange my current cylinder with a prefilled cylinder</label><br />
+        <input type="checkbox" id="refill" name="preference" value="refill" />
+        <label for="refill">Pick my cylinder, refill and return it to my location</label><br /><br />
 
-    <!-- Services -->
-    <section id="services">
-        <h2>Services</h2>
-        <ul>
-            <li><strong>Graphic Design:</strong> Visual communication using typography, photography, illustration.</li>
-            <li><strong>Web Design:</strong> Skills in production and maintenance of websites.</li>
-            <li><strong>UI & UX:</strong> Improving usability, accessibility, and satisfaction.</li>
-            <li><strong>Web Development:</strong> Developing websites for internet or intranet.</li>
-        </ul>
-    </section>
+        <label for="size">My Cylinder Size is:</label><br />
+        <select id="size" name="size">
+            <option value="">Select size</option>
+            <option value="5kg">5 kg</option>
+            <option value="10kg">10 kg</option>
+            <option value="15kg">15 kg</option>
+            <option value="Other">Other</option>
+        </select><br /><br />
 
-    <!-- Portfolio -->
-    <section id="portfolio">
-        <h2>Portfolio</h2>
-        <ul>
-            <li>Project 1: Creative web design project</li>
-            <li>Project 2: Graphic design campaign</li>
-            <li>Project 3: UI/UX redesign</li>
-        </ul>
-    </section>
+        <label for="quantity">Quantity Required:</label><br />
+        <input type="number" id="quantity" name="quantity" /><br /><br />
 
-<!-- About -->
-<section id="about">
-    <h2>About</h2>
-    <p>Hello! I am Moataz. I love creating clean and simple digital experiences that are functional and beautiful.</p>
+        <label for="amount">AMOUNT DUE:</label><br />
+        <input type="text" id="amount" name="amount" /><br /><br />
 
-    <h3>Programming Skills</h3>
-    <table border="1">
-        <tr>
-            <th>Language</th>
-            <th>OOP</th>
-        </tr>
+        <label for="address">Delivery Address (Please include nearest landmarks):</label><br />
+        <textarea id="address" name="address" rows="4" cols="50"></textarea><br /><br />
 
-        <tr>
-            <td>C++</td>
-            <td>✔️ Yes</td>
-        </tr>
-
-        <tr>
-            <td>Python</td>
-            <td>✔️ Yes</td>
-        </tr>
-
-        <tr>
-            <td>HTML</td>
-            <td>❌Language Not Support</td>
-        </tr>
-
-        <tr>
-            <td>CSS</td>
-            <td>❌ Language Not Support</td>
-        </tr>
-
-        <tr>
-            <td>Basics JS</td>
-            <td>❌ Not Yet</td>
-        </tr>
-    </table>
-</section>
-
-
-    <!-- Contact -->
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:amotaz668@gmail.com">amotaz668@gmail.com</a></p>
-        <p>Social: Instagram | Facebook | Linkedin</p>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <hr>
-        <p>&copy; 2025 Moataz. All rights reserved.</p>
-    </footer>
-
+        <button type="submit">Place Order</button>
+    </form>
 </body>
 
 </html>
