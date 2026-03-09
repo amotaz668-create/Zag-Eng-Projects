@@ -138,40 +138,36 @@ LIMIT 5;
 
 -- ============ Task 2 ===============
 
-SELECT
-  room_type,
-  COUNT(*) AS total_patients,
-  MAX(bill_amount) AS max_bill,
-  MIN(bill_amount) AS min_bill,
-  SUM(bill_amount) AS total_revenue
+SELECT room_type, 
+COUNT(*) AS total_patients,
+MAX(bill_amount),MIN(bill_amount),
+SUM(bill_amount) AS total_revenue
 FROM patients
 GROUP BY room_type
 HAVING SUM(bill_amount) > 5000;
 
 -- ============ Task 3 ===============
-
 SELECT
   name,
   LENGTH(name) AS name_length,
   DATEDIFF(CURDATE(), admission_date) AS days_in_hospital
 FROM patients;
 
-SELECT
-  name,
-  LOWER(specialization) AS specialization_lower
+SELECT name,
+LOWER(name) AS name_lower
 FROM doctors;
 
 -- ============ Task 4 ===============
 
 ALTER TABLE doctors
-ADD COLUMN email VARCHAR(255);
+ADD COLUMN email VARCHAR(100);
 
 UPDATE doctors
-SET salary = ROUND(salary * 1.10)
+SET salary = salary + (salary * 0.1)
 WHERE specialization = 'Cardiology';
 
 DELETE FROM patients
 WHERE status = 'Discharged';
 
 ALTER TABLE patients
-MODIFY bill_amount DECIMAL(10,2);
+MODIFY COLUMN bill_amount DECIMAL(10,2);
